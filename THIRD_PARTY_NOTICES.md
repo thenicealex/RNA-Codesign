@@ -6,7 +6,7 @@ notices are retained, and adapted MIT components retain their original terms.
 | Files | Source and terms |
 | --- | --- |
 | `src/np/rna_template_data.json` | [RhoFold RNA constants](https://github.com/ml4bio/RhoFold/blob/24ef5b9d19349bc6a3ecd8075742334e471cbd7d/rhofold/utils/constants.py), Apache-2.0; full text in `licenses/RhoFold-Apache-2.0.txt` |
-| `src/np/residue_constants.py` | RNA-CodeSign implementation that converts the licensed RhoFold reference data to checkpoint-compatible atom and torsion layouts |
+| `src/np/residue_constants.py` | RNA-Codesign implementation that converts the licensed RhoFold reference data to checkpoint-compatible atom and torsion layouts |
 | `src/models/ipa_pytorch.py` | Adaptation of [OpenFold invariant point attention](https://github.com/aqlaboratory/openfold), Apache-2.0 |
 | `src/data/data_transforms.py`, `src/data/mmcif_parsing.py`, `src/np/nucleicacid.py`, `src/utils/rigid_utils.py`, `src/utils/tensor_utils.py` | Apache-2.0 helpers with retained DeepMind and AlQuraishi Laboratory notices, adapted for RNA processing |
 | `src/utils/feats.py` | Adaptation of the individually [Apache-2.0-licensed NuFold/OpenFold helper](https://github.com/kiharalab/NuFold/blob/master/nufold/model/openfold/feats.py); retains Y.K / Kihara Lab, AlQuraishi Laboratory, and DeepMind notices |

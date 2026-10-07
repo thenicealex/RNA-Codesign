@@ -1,4 +1,4 @@
-# Modified for RNA-CodeSign RNA processing and inference.
+# Modified for RNA-Codesign RNA processing and inference.
 # Copyright 2021 AlQuraishi Laboratory
 # Copyright 2021 DeepMind Technologies Limited
 #

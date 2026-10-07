@@ -1,6 +1,6 @@
 """Checkpoint atom conventions and geometry derived from Apache-2.0 RhoFold data.
 
-The vocabulary and indices implement the RNA-CodeSign checkpoint interface.
+The vocabulary and indices implement the RNA-Codesign checkpoint interface.
 Ideal coordinates are transformed from the licensed rna_template_data.json;
 NuFold implementations and geometry tables are not used.
 """

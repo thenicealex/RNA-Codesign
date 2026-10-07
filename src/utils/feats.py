@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# Modified for the RNA-CodeSign inference atom representation.
+# Modified for the RNA-Codesign inference atom representation.
 
 """Utilities for calculating all atom representations."""
 

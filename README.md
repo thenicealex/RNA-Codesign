@@ -1,4 +1,4 @@
-# RNA-CodeSign inference
+# RNA-Codesign inference
 
 SE(3) flow matching for RNA sequence and structure generation. This standalone
 inference snapshot supports four tasks:
