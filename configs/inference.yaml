@@ -1,0 +1,42 @@
+# @package _global_
+defaults:
+  - model: flow
+  - interpolant: default
+  - data: inference
+  - _self_
+  - experiment: inference_unconditional
+
+task_name: inference
+experiment:
+  seed: 42
+  trainer:
+    _target_: pytorch_lightning.Trainer
+    accelerator: gpu
+    devices: 1
+    logger: false
+    enable_checkpointing: false
+
+paths:
+  output_dir: ${hydra:runtime.cwd}/outputs
+
+inference:
+  task: unconditional
+  seed: ${experiment.seed}
+  ckpt_path: null
+  ckpt_id: null
+  weight_variant: ema
+  samples_dir: ${paths.output_dir}/${inference.task}/${inference.ckpt_id}/samples
+  write_sample_trajectories: false
+  samples:
+    samples_per_length: 1
+    num_batch: 1
+    length_subset: [40]
+    min_length: 40
+    max_length: 150
+    length_step: 10
+
+hydra:
+  run:
+    dir: ${paths.output_dir}/runs/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: false

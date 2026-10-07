@@ -1,0 +1,82 @@
+# Ruff configuration for RNA-CodeSign project
+# Ruff is a fast Python linter and formatter
+# See https://docs.astral.sh/ruff/ for details
+
+# Target Python version
+target-version = "py310"
+
+# Line length (Black-compatible)
+line-length = 120
+
+# Skip directories
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    "*.egg-info",
+    "rhofold",  # Vendored package
+    "ckpts",
+    "wandb",
+    ".pytest_cache",
+    ".ruff_cache",
+]
+
+# Ignored directories for linting
+extend-exclude = [
+    "scripts/compare_c1_frame_masks.py",  # May have specific style needs
+]
+
+# Linting configuration
+[lint]
+# Rule selection
+# See https://docs.astral.sh/ruff/rules/ for available rules
+select = [
+    "F",   # Pyflakes
+    "E",   # Pycodestyle errors
+    "W",   # Pycodestyle warnings
+    "I",   # isort
+    "UP",  # Pyupgrade
+    "B",   # Bugbear
+    "LOG", # Logging
+    "PT",  # Pytest
+    "YTT", # Flake8-2020
+    "RUF", # Ruff-specific
+]
+
+# Rules to ignore (too strict or not applicable)
+ignore = [
+    "E501",  # Line too long (handled by formatter)
+    "E731",  # Do not assign a lambda expression
+    "E402",  # Import not at top of file (needed for PYTHONPATH=src)
+    "B006",  # Mutable default arguments (common in ML configs)
+    "F841",  # Unused variables starting with _
+    "E701",  # Multiple statements on one line
+    "E702",  # Multiple statements on one line
+    "C901",  # Too complex
+    "G004",  # Existing logging calls use f-strings
+    "LOG015", # Some existing calls use the root logger
+]
+
+# Per-file ignores
+[lint.per-file-ignores]
+# Tests can have unused imports, etc.
+"tests/*" = ["F811", "E741", "S101"]
+# __init__.py files can have unused imports
+"*/__init__.py" = ["F401"]
+# Configuration files may have string literals
+"configs/*" = ["F401", "E501"]
+# Scripts may have main functions without type hints
+"scripts/*" = ["TCH001", "ANN"]
+
+# isort configuration
+[lint.isort]
+known-first-party = ["src", "data", "models", "utils", "analysis"]
+split-on-trailing-comma = false
+
+# Formatting configuration (Black-compatible)
+[format]
+# Use Black-compatible formatting
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"

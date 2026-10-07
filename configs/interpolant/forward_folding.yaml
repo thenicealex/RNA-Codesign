@@ -1,0 +1,10 @@
+defaults:
+  - inference
+  - _self_
+
+codesign_separate_t: True
+
+aatypes:
+  temp: 0.1
+  noise: 0.0
+  do_purity: False

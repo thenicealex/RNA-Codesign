@@ -1,0 +1,14 @@
+# Runtime versions observed in the reference rna-codesign environment.
+# Install torch==2.5.0 with CUDA 12.4 and the matching torch-scatter wheel separately.
+pytorch-lightning==2.5.0.post0
+hydra-core==1.3.2
+omegaconf==2.3.0
+numpy==2.1.3
+scipy==1.15.3
+einops==0.8.1
+pandas==2.2.3
+biopython==1.85
+biotite==1.1.0
+scikit-learn==1.6.1
+tqdm==4.67.1
+dm-tree==0.1.9

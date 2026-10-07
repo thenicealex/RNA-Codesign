@@ -1,0 +1,15 @@
+defaults:
+  - default
+  - _self_
+
+trans:
+  pre_align: True
+  train_schedule: linear
+  sample_schedule: linear
+  rog:
+    weight: 20.0
+
+aatypes:
+  schedule_exp_rate: -3
+  temp: 0.5
+  noise: 20.0

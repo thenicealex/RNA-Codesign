@@ -1,0 +1,40 @@
+min_t: 1e-2
+provide_kappa: False
+codesign_separate_t: False
+codesign_forward_fold_prop: 0.0
+codesign_inverse_fold_prop: 0.0
+
+rots:
+  corrupt: True
+  train_schedule: cosine
+  sample_schedule: exp
+  exp_rate: 10
+
+trans:
+  corrupt: True
+  batch_ot: True
+  train_schedule: cosine
+  sample_schedule: cosine
+  sample_temp: 1.0
+  vpsde_bmin: 0.1
+  vpsde_bmax: 20.0
+  potential: null
+  potential_t_scaling: False
+  rog:
+    weight: 10.0
+    cutoff: 5.0
+
+aatypes:
+  corrupt: True
+  schedule: linear
+  schedule_exp_rate: 10
+  temp: 1.0
+  noise: 0.0
+  do_purity: False
+  purity_switch_t: 0.5
+  interpolant_type: masking
+
+sampling:
+  num_timesteps: 100
+
+self_condition: ${model.edge_features.self_condition}

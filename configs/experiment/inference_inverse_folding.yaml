@@ -1,0 +1,6 @@
+# @package _global_
+defaults:
+  - override /interpolant: inverse_folding
+  - _self_
+inference:
+  task: inverse_folding

@@ -1,0 +1,4 @@
+loader:
+  num_workers: 0
+dataset:
+  metadata_path: null

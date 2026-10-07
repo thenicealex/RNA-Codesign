@@ -1,0 +1,19 @@
+RNA-CodeSign inference
+Copyright 2026 RNA-CodeSign contributors
+
+This distribution contains adaptations of Apache-2.0 code attributed to
+DeepMind Technologies Limited, AlQuraishi Laboratory, and Y.K / Kihara Lab.
+Existing file-level copyright and license notices are retained. Modified
+RNA processing and geometry helpers are identified in their source headers.
+
+RNA reference coordinate data is derived from the Apache-2.0 RhoFold project:
+https://github.com/ml4bio/RhoFold
+Pinned source and representation details appear in np/rna_template_data.json.
+The coordinates are transformed into RNA-CodeSign's checkpoint conventions.
+The RhoFold model and its weights are not bundled.
+
+SO(3) helpers include adaptations from se3_diffusion and geomstats, distributed
+under their respective MIT terms. Their full copyright and license texts are
+included in licenses/se3-diffusion-MIT.txt and licenses/geomstats-MIT.txt.
+
+See THIRD_PARTY_NOTICES.md for source links and file-level attribution.

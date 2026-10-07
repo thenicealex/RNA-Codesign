@@ -1,0 +1,16 @@
+# @package _global_
+defaults:
+  - override /interpolant: inference
+  - _self_
+inference:
+  task: scaffolding
+  scaffolding:
+    input_pdb: null
+    contigs: null
+    distance_span_distribution: null
+    distance_span_temperature: 1.0
+    generate_5prime: false
+    terminal_5prime_length: "0-10"
+    generate_3prime: false
+    terminal_3prime_length: "0-10"
+    length: null

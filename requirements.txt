@@ -1,0 +1,13 @@
+# Install CUDA-enabled PyTorch and matching torch-scatter first; see README.md.
+pytorch-lightning>=2.0
+numpy>=1.24
+scipy>=1.10
+einops>=0.6
+hydra-core>=1.3
+omegaconf>=2.3
+pandas>=1.5
+biopython>=1.81
+biotite>=0.36
+scikit-learn>=1.2
+tqdm>=4.65
+dm-tree>=0.1.8
