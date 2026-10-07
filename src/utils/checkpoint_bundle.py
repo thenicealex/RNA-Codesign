@@ -193,4 +193,3 @@ def build_inference_config(
     ):
         _copy_value(effective_cfg, runtime_cfg, path)
     return effective_cfg
-

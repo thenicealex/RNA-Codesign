@@ -70,4 +70,3 @@ def batch_align_structures(pos_1, pos_2, mask=None):
         flat_pos_2[flat_mask],
     )
     return torch.bmm(pos_1, rotations), pos_2, rotations
-

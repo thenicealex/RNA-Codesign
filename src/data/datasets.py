@@ -135,4 +135,3 @@ class PdbDataset(Dataset):
         features["diffuse_mask"] = features["res_mask"].clone()
         features["csv_idx"] = torch.tensor([index])
         return features
-
